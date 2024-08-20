@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almost.pedro Creatives - Client Inquiry Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <!-- Header Link -->
+        <div class="header-link">
+            <a href="https://almostpedrobyjupetjagonos.squarespace.com/" target="_blank" class="header-text">
+                almost.pedro Creatives <br> By jupet jagonos
+            </a>
+        </div>
+
+    <!-- First Phase/Page: SVG Logo -->
+    <div class="page logo-page">
+        <svg class="logo" width="400" height="400" xmlns="http://www.w3.org/2000/svg" onclick="startInquiry()">
+            <defs>
+                <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#7f7f7f"/>
+                    <stop offset="100%" stop-color="#ffffff"/>
+                </linearGradient>
+            </defs>
+            <g>
+                <ellipse class="ellipse" fill="black" cx="198.62075" cy="224.23774" rx="23.10079" ry="23.10079"/>
+                <ellipse class="ellipse" fill="black" cx="148.32541" cy="224.25228" rx="23.10079" ry="23.10079"/>
+                <ellipse class="ellipse" fill="black" cx="250.09975" cy="223.99635" rx="23.10079" ry="23.10079"/>
+                <text transform="matrix(0.595281 0 0 0.595281 68.6265 102.442)" class="logo-text" y="278.79487" x="184.36272" fill="black">almost</text>
+            </g>
+        </svg>
+    </div>
+
+    <!-- Second Phase/Page: Questions -->
+    <div class="page question-page" id="question-page">
+        <div class="overlap-group">
+            <div id="question-container"></div>
+        </div>
+    </div>
+
+    <!-- Third Phase/Page: Package Results
+    <div class="page result-page" id="result-page">
+        <div class="overlap-group">
+            <h2>Your Package</h2>
+            <button id="reveal-package-button" onclick="revealPackage()">Reveal Package</button>
+            <div id="package-result" style="display:none;"></div>
+            <button onclick="showCountdown()" style="display:none;" id="next-button">Next</button>
+        </div>
+    </div> -->
+
+   
+<div class="page result-page" id="result-page">
+    <div class="overlap-group">
+        <h2>Click To Reveal</h2>
+        <svg class="logo" width="400" height="400" xmlns="http://www.w3.org/2000/svg" onclick="revealPackage()" style="cursor: pointer;">
+            <defs>
+                <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#7f7f7f"/>
+                    <stop offset="100%" stop-color="#ffffff"/>
+                </linearGradient>
+            </defs>
+            <g>
+                <ellipse class="ellipse" fill="black" cx="198.62075" cy="224.23774" rx="23.10079" ry="23.10079"/>
+                <ellipse class="ellipse" fill="black" cx="148.32541" cy="224.25228" rx="23.10079" ry="23.10079"/>
+                <ellipse class="ellipse" fill="black" cx="250.09975" cy="223.99635" rx="23.10079" ry="23.10079"/>
+                <text transform="matrix(0.595281 0 0 0.595281 68.6265 102.442)" class="logo-text" y="278.79487" x="184.36272" fill="black">almost</text>
+            </g>
+        </svg>
+        <div id="package-result" style="display:none;"></div>
+        <button onclick="showCountdown()" style="display:none;" id="next-button">Next</button>
+    </div>
+</div>
+
+
+    <!-- Fourth Phase/Page: Wedding Countdown -->
+    <div class="page countdown-page" id="countdown-page">
+        <div class="countdown">
+            <label for="wedding-date">Set your wedding date:</label>
+            <input type="date" id="wedding-date" onchange="startCountdown()">
+            <div id="countdown-display"></div>
+            <button onclick="showGallery()">View Gallery</button>
+        </div>
+    </div>
+
+    <!-- Fifth Phase/Page: Unsplash Gallery -->
+    <div class="page gallery-page" id="gallery-page">
+        <h2>Wedding Inspiration Gallery</h2>
+        <h6>check out my portfolio: link above</h6>
+        <div class="photo-grid" id="photo-grid"></div>
+        <button id="calendly-button" onclick="openCalendly()">Book Your Photoshoot Appointment Now</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

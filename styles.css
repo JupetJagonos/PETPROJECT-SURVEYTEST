@@ -1,0 +1,148 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.page {
+    display: none; /* Initially hide all pages */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: opacity 0.5s;
+}
+
+.logo-page {
+    display: flex; /* Show the logo page initially */
+}
+
+.logo {
+    cursor: pointer;
+    transition: fill 0.5s ease, transform 0.5s ease;
+}
+
+.ellipse, .logo-text {
+    transition: fill 0.5s ease;
+}
+
+.logo:hover .ellipse,
+.logo:hover .logo-text {
+    fill: url(#gradient);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.overlap-group {
+    width: 80%; /* Width of the overlap group */
+    max-width: 600px; /* Max width for better visual layout */
+    background-color: rgba(246, 234, 222, 0.5); /* Slightly transparent background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 30px; /* Padding inside the overlap group */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    backdrop-filter: blur(10px); /* Blur effect */
+}
+
+button, .question-option, .submit-option {
+    margin: 10px 0; /* Margin around buttons */
+    padding: 12px 24px; /* Padding for buttons */
+    border-radius: 25px; /* Rounded corners for buttons */
+    background-color: #b2b2b2; /* Button background color */
+    color: #fff; /* Button text color */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s, transform 0.3s; /* Animation effects */
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1); /* Button shadow */
+}
+
+.question-option {
+    margin: 15px 5px; /* Increased margin for better spacing between buttons */
+}
+
+button:hover, .question-option:hover, .submit-option:hover {
+    background-color: #888; /* Change button color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Gap between grid items */
+    padding: 20px; /* Padding around the grid */
+    width: 80%; /* Take 80% of the width of the containing element */
+    max-width: 1000px; /* Max width to prevent overflow */
+}
+
+.photo-grid img {
+    width: 100%; /* Full width for images in the grid */
+    border-radius: 8px; /* Rounded corners for images */
+    object-fit: cover; /* Ensure image covers the area */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for images */
+    transition: transform 0.3s; /* Animation for scaling on hover */
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+#calendly-button {
+    margin-top: 20px; /* Spacing above the button */
+    background-color: #963030; /* Button color */
+}
+
+#calendly-button:hover {
+    background-color: #742020; /* Darker on hover */
+}
+
+.countdown {
+    margin-top: 20px; /* Margin for countdown section */
+    text-align: center; /* Align text to center */
+    font-size: 50px; /* Font size for countdown */
+    color: #333; /* Color for countdown text */
+}
+
+.countdown label {
+    font-weight: bold; /* Bold style for the countdown label */
+}
+
+input[type="date"] {
+    padding: 10px; /* Padding inside date input */
+    margin-top: 10px; /* Top margin for spacing */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ddd; /* Border for date input */
+    font-size: 16px; /* Font size for date input */
+    outline: none; /* Remove outline */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+input[type="date"]:focus {
+    border-color: #963030; /* Change border color on focus */
+}
+.header-link {
+    position: fixed; /* Keep it at the top */
+    top: 10px; /* Space from the top */
+    left: 50%; /* Center the container horizontally */
+    transform: translateX(-50%); /* Adjust positioning */
+    z-index: 10; /* Keep it on top of other content */
+    text-align: center; /* Center the text */
+}
+
+.header-text {
+    font-family: "Helvetica Neue-ThinItalic", Helvetica;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 9px; /* Set font size to 9 */
+    color: black; /* Text color */
+    text-decoration: none; /* No underline */
+}
